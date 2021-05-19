@@ -1,0 +1,54 @@
+.header
+  padding-top: 2.5rem
+  padding-bottom: 2.25rem
+  &__block
+    display: flex
+    justify-content: space-between
+    align-items: center
+    text-transform: uppercase
+  &__logo
+    font-size: 1.6rem
+    font-family: Roboto
+    font-weight: 700
+    text-decoration: none
+    color: $black
+    display: flex
+    align-items: center
+    &::before
+      content: ''
+      background: url('../img/logo.png')
+      width: 25px
+      height: 27px
+      margin-right: 10px
+  &__nav
+    max-width: 500px
+    width: 100%
+    display: flex
+    justify-content: space-between
+    &__link
+      position: relative
+      text-decoration: none
+      color: $secondary
+      font-size: 1.16rem
+      font-weight: 700
+      transition: all 0.1s
+      &::after
+        position: absolute
+        content: ''
+        top: 3.83rem
+        left: 0
+        width: 0%
+        height: 3px
+        background-color: $primary
+        transition: 0.25s
+      &:hover
+        color: $black
+        &::after
+          width: 100%
+.phone
+  font-size: 1.6rem
+  text-decoration: none
+  color: $secondary
+  &-selection
+    color: $black
+    font-weight: 700
