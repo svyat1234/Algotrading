@@ -1,5 +1,5 @@
 var player;
-$('.video__play').on('click', function onYouTubeIframeAPIReady() {
+$('.simple__video').on('click', function onYouTubeIframeAPIReady() {
   player = new YT.Player('player', {
     height: '465',
     width: '100%',

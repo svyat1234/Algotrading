@@ -1,0 +1,91 @@
+.format
+  margin-top: 117px
+  &__title
+    text-align: center
+    margin-bottom: 70px
+  &__images
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 70px
+    flex-wrap: wrap
+    &__content
+      position: relative
+    &__info
+      position: absolute
+      bottom: 0
+      left: 0
+      margin: 47px
+      color: $light
+    &__title
+      font-size: 24px
+      margin-bottom: 30px
+      max-width: 100px
+    &__text
+      display: flex
+      font-size: 14px
+      line-height: 24px
+      font-weight: 300
+      &-test
+        max-width: 200px
+      &-help
+        max-width: 272px
+  &__cards
+    display: flex
+    justify-content: space-between
+    align-items: baseline
+    padding-bottom: 140px
+    border-bottom: 1px solid #eaf1f7
+  &__card
+    flex-basis: 20%
+    &__img
+      position: relative
+      margin-bottom: 49px
+      &::before
+          position: absolute
+          content: ''
+          display: flex
+      &-radio
+        width: 64px
+        height: 44px
+        background: url('../img/radio.png')
+        &::before
+          background: url('../img/radio_bg.png') 
+          width: 64px
+          height: 64px
+          bottom: 11px
+          left: 34px
+      &-letter
+        width: 64px
+        height: 64px
+        background: url('../img/letter.png')
+        &::before
+          background: url('../img/letter_bg.png') no-repeat
+          width: 42px
+          height: 64px
+          bottom: 11px
+          left: 44px
+      &-massage
+        width: 64px
+        height: 57px
+        background: url('../img/massage.png')
+        &::before
+          background: url('../img/massage_bg.png') no-repeat
+          width: 64px
+          height: 64px
+          bottom: 2px
+          left: 9px
+      &-online
+        width: 64px
+        height: 55px
+        background: url('../img/online.png')
+        &::before
+          background: url('../img/online_bg.png') no-repeat
+          width: 64px
+          height: 64px
+          left: 55px
+    &__title
+      font-size: 24px
+      margin-bottom: 32px
+    &__text
+      font-size: 15px
