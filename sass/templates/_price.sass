@@ -1,0 +1,48 @@
+.price
+    position: relative
+    padding-top: 118px
+    margin-bottom: 120px
+    &::before
+        position: absolute
+        content: ''
+        display: flex
+        top: 0
+        left: 50%
+        margin-left: -1px
+        width: 1px
+        height: 72px
+        background-color: #eaf1f7
+    &__info
+        max-width: 355px
+    &__cards
+        max-width: 970px
+        margin: auto
+        margin-top: 74px
+        display: flex
+    &__card
+        min-height: 390px
+        position: relative
+        flex-basis: 33%
+        &:not(:last-child)
+            
+            border-right: 1px solid #eaf1f7
+            
+        &__title
+            font-size: 20px
+        &__info
+            font-size: 20px
+            font-weight: 700
+            display: inline-block
+            margin-top: 30px
+            margin-bottom: 45px
+        &__text
+            font-size: 16px
+            max-width: 230px
+            margin: auto
+            margin-bottom: 30px
+    &__button
+        position: absolute
+        bottom: 0
+        left: 50%
+        margin-left: -85px
+        width: 170px

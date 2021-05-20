@@ -115,12 +115,12 @@
         <div class="profit__calc">
           <div class="profit__calc__content">
             <div class="profit__calc__payment">
-              <input type="text" class="profit__calc__input">
+              <input type="text" class="profit__calc__input" id="n1">
               <span class="profit__calc__info">Количество инструментов,
                 по которым Вы торгуете</span>
             </div>
             <div class="profit__calc__result">
-              <input type="text" class="profit__calc__input">
+              <input type="text" class="profit__calc__input" id="n2">
               <span class="profit__calc__result__info">Средняя месячная		
                 прибыль (%)</span>
             </div>
@@ -128,17 +128,17 @@
           <!-- /.profit__calc__income -->
           <div class="profit__calc__content">
             <div class="profit__calc__payment">
-              <input type="text" class="profit__calc__input">
+              <input type="text" class="profit__calc__input" id="n3">
               <span class="profit__calc__info">Количество инструментов
                 Вашего брокера</span>
             </div>
             <div class="profit__calc__result">
-              <input type="text" class="profit__calc__input">
+              <input type="text" class="profit__calc__input" id="n4">
               <span class="profit__calc__result__info">Сумма депозита ($)</span>
             </div>
           </div>
           <!-- /.profit__calc__income -->
-          <botton class="button button__primary profit__button">Просчитать прибыль на 2016 год</botton>
+          <botton class="button button__primary profit__button" onclick="plus()" data-toggle="modal">Просчитать прибыль на 2016 год</botton>
         </div>
         <!-- /.profit__calc -->
       </div>
@@ -325,6 +325,103 @@
     <!-- /.container -->
   </section>
   <!-- /.privilege -->
+  <section class="price">
+    <div class="container">
+      <div class="section__heading">
+        <h2 class="section__title price__title">Сколько стоит обучение?</h2>
+        <span class="section__info price__info">Станьте частью алготрейдинга прямо сейчас и всего за месяц прямо на сессиях создайте своего эффективного торгового робота с нуля!</span>
+        <div class="price__cards">
+          <div class="price__card">
+            <h3 class="price__card__title">Gold</h3>
+            <span class="price__card__info selection">$297</span>
+            <p class="price__card__text">Начитка лекций</p>
+            <p class="price__card__text">Практика</p>
+            <p class="price__card__text">Ответы на вопросы</p>
+            <p class="price__card__text">Тех. поддержка</p>
+            <button class="button button__secondary price__button">купить</button>
+          </div>
+          <!-- /.price__card -->
+          <div class="price__card">
+            <h3 class="price__card__title">Premium</h3>
+            <span class="price__card__info selection">$497</span>
+            <p class="price__card__text">Обучение с куратором</p>
+            <p class="price__card__text">Постоянная возможность связаться с преподователем</p>
+            <p class="price__card__text">Практика</p>
+            <button class="button button__secondary price__button">купить</button>
+          </div>
+          <!-- /.price__card -->
+          <div class="price__card">
+            <h3 class="price__card__title">VIP</h3>
+            <span class="price__card__info selection">$997</span>
+            <p class="price__card__text">Полностью индивидуальное обучение!</p>
+            <p class="price__card__text">Индивидуальная программа</p>
+            <p class="price__card__text">Максимум практики</p>
+            <button class="button button__secondary price__button">купить</button>
+          </div>
+          <!-- /.price__card -->
+        </div>
+        <!-- /.price__cards -->
+      </div>
+      <!-- /.section__heading -->
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.price -->
+  <section class="learn">
+    <div class="container">
+      <div class="learn__heading">
+        <h2 class="section__title learn__title">Получите первые видеоуроки совершенно бесплатно уже сейчас!</h2>
+        <span class="section__info learn__info">Просто внесите Ваши данные в форму прям сейчас, и мы сразу Вам вышлем подборку первых видеоуроков. Убедитесь сами!</span>
+      </div>
+      <!-- /.section__heading -->
+      <form class="learn__form">
+        <input type="text" name="userName" class="input learn__input" id="user-name" placeholder="Имя">
+        <input type="tel" name="userName" class="input learn__input" id="user-name" placeholder="Телефон">
+        <input type="email" name="userName" class="input learn__input" id="user-name" placeholder="Email">
+        <button class="button button__primary learn__button">начать обучение</button>
+      </form>
+    </div>
+    <!-- /.container -->
+  </section>
+  <!-- /.learn -->
+  <section class="results">
+    <div class="container">
+      <div class="results__block">
+          <div class="results__heading">
+            <h2 class="section__title results__title"><span class="section__text-bold">Результаты</span> наших учеников</h2>
+            <span class="section__info results__info">С нами наши ученики научились эффективно торговать на международных рынках</span>
+          </div>
+        <!-- /.results__heading -->
+        <div class="results__cards">
+          <div class="results__card">
+            <img src="img/results1.jpg" alt="" class="results__card__image">
+            <h3 class="results__card__title">Мария, январь 2019</h3>
+            <p class="results__card__text">Методом проб и ошибок смог определить необходимые качества успешного трейдера, 70% которых составляет психологическая и эмоциональная устойчивость во время трейдинга</p>
+          </div>
+          <!-- /.results__card -->
+          <div class="results__card">
+            <img src="img/results2.jpg" alt="" class="results__card__image">
+            <h3 class="results__card__title">Иван, январь 2019</h3>
+            <p class="results__card__text results__card__text-secondary">Алготрейдинг — это свежее дыхание в мире финансовой аналитики, новые научные подходы к обучению и только качественная информация</p>
+          </div>
+          <!-- /.results__card -->
+        </div>
+        <!-- /.result__cards -->
+      </div>
+      <!-- /.results__block -->
+    </div>
+    <!-- /.contailer -->
+  </section>
+  <!-- /.resaults -->
+  <div class="modal__calc">
+    <div class="modal__calc__dialog">
+        <button class="modal__calc__close"><img src="img/close.png" class="modal__calc__close-img" alt=""></button>
+        <h3 class="modal__calc__title">Ваша прибыль за 2016 год составит:</h3>
+        <p id="out">Ответ:</p>
+    </div>
+    <!-- /.modal__dialog -->
+</div>
+<!-- /.modal -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="js/main.js"></script>
 </body>
