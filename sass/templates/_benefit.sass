@@ -1,34 +1,100 @@
 .benefit
-  padding-top: 130px
-  padding-bottom: 130px
-  background: url('../img/benefit_bg.png') no-repeat center / cover
+  position: relative
+  padding-top: 160px
+  background: #eaf1f7
+  padding-bottom: 178px
+  &-bg
+    background: url('../img/benefit-phone.png') no-repeat center
+    padding-bottom: 200px
+    margin-bottom: -172px
+  &::before
+    position: absolute
+    content: ''
+    display: flex
+    bottom: 0
+    left: 50%
+    display: flex
+    height: 560px
+    width: 315px
+    margin-left: -157.5px
+    background-image: linear-gradient(0.0deg, #f7fafc 0%, #e4edf6 100%);
   &__title
     max-width: 465px
     margin: auto
-    margin-bottom: 200px
+    // margin-bottom: 200px
     text-align: center
+    padding-bottom: 300px
   &-line
     &__title
       font-size: 18px
+      margin-bottom: 25px
     &__text
       font-size: 14px
-      max-width: 130px
+      max-width: 160px
       display: inline-block
+    &__images
+      position: relative
+      display: flex
+      margin-bottom: 52px
+      justify-content: center
+      &::before
+        position: absolute
+        content: ''
+        display: flex
+        top: 0
+        left: 50%
+        margin-top: -55px
+        margin-left: -23px
+        width: 46px
+        height: 57px
+        background: url('../img/height.png') no-repeat center
 .slider
-  width: 160px
-  height: 160px
-  border: 1px solid black
+  width: 320px
+  height: 370px
   margin: auto
   overflow: hidden
   &-line
+    padding-top: 57px
     display: flex
-    height: 160px
-    width: 640px
+    height: 
+    width: 960px
     position: relative
-    left: 0
+    bottom: 0
     transition: all 1s
     &__card
-      max-width: 160px
+      max-width: 320px
       width: 100%
       text-align: center
-    
+  &__buttons
+    position: relative
+    max-width: 750px
+    padding-left: 20px
+    padding-right: 20px
+    margin: auto
+    margin-top: -371px
+    &-next
+      text-align: right
+      position: absolute
+      right: 0
+    &-prev
+      display: flex
+      flex-direction: column
+  &-prev
+    width: 52px
+    height: 12px
+    margin-bottom: 9px
+    cursor: pointer
+    &-text
+      font-size: 16px
+  &-next
+    position: absolute
+    right: 0
+    bottom: 25px
+    background: transparent
+    border: none
+    width: 52px
+    height: 16px
+    cursor: pointer
+    display: block
+    &-text
+      font-size: 16px
