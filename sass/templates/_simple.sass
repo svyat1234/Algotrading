@@ -19,28 +19,7 @@
       height: 47px
       background-color: #eaf1f7
   &__video
-    position: relative
     background: url('../img/simple_video.jpg') no-repeat center
-    min-height: 387px
-    max-height: 387px
-    max-width: 945px
-    margin: auto
-    &::before
-      position: absolute
-      content: ''
-      left: 0
-      top: 0
-      width: 100%
-      height: 100%
-      transition: all 0.2s
-      background: rgba(0, 0, 0, 0.2)
-      opacity: 0
-    &:hover
-      cursor: pointer
-      &::before
-        opacity: 100
-    &:hover > .video__play
-      transform: scale(1.2)
   &__create
     max-width: 1200px
     padding-bottom: 120px
@@ -58,6 +37,11 @@
     max-width: 560px
     width: 100%
 .video
+  position: relative
+  min-height: 387px
+  max-height: 387px
+  max-width: 945px
+  margin: auto
   &__play
     position: absolute
     left: 50%
@@ -66,4 +50,20 @@
     margin-top: -32px
     cursor: pointer
     transition: all 0.2s
+  &::before
+    position: absolute
+    content: ''
+    left: 0
+    top: 0
+    width: 100%
+    height: 100%
+    transition: all 0.2s
+    background: rgba(0, 0, 0, 0.2)
+    opacity: 0
+  &:hover
+    cursor: pointer
+    &::before
+        opacity: 100
+  &:hover > .video__play
+    transform: scale(1.2)
       

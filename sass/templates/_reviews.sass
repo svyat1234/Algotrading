@@ -1,0 +1,29 @@
+.reviews
+    position: relative
+    padding-top: 120px
+    text-align: center
+    &::after
+        position: absolute
+        content: ''
+        display: flex
+        top: 0
+        left: 50%
+        margin-left: -1px
+        height: 70px
+        width: 1px
+        background-color: #eaf1f7
+    &__title
+        margin-bottom: 64px
+    &__info
+        margin-top: 77px
+        &__title
+            font-size: 24px
+            margin-bottom: 36px
+    &__text
+        font-size: 16px
+        max-width: 546px
+        display: flex
+        margin: auto
+        line-height: 1.4
+    &__video
+        background: url('../img/reviews_video.jpg') no-repeat center
