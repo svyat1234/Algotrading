@@ -138,15 +138,6 @@ body {
       flex-basis: 20%;
 }
 
-@media screen and (max-width: 1250px) {
-  .container {
-    max-width: 900px;
-  }
-  .header__nav {
-    max-width: 200px;
-  }
-}
-
 .header {
   position: relative;
   background-color: white;
@@ -1700,5 +1691,86 @@ body {
 .footer__contacts__img {
   width: auto;
   height: auto;
+}
+
+@media screen and (max-width: 1250px) {
+  .container {
+    max-width: 900px;
+  }
+  .header__nav {
+    max-width: 400px;
+  }
+  .hero {
+    padding-bottom: 550px;
+  }
+  .advantages {
+    margin-top: -320px;
+  }
+  .advantages__profit {
+    font-size: 250px;
+  }
+  .advantages__profit__percent {
+    font-size: 80px;
+  }
+  .profit__calc {
+    max-width: 550px;
+  }
+  .profit__calc__input {
+    width: 70px;
+  }
+  .profit__calc__payment {
+    max-width: 300px;
+  }
+  .profit__calc__result {
+    max-width: 235px;
+  }
+  .format__img {
+    max-width: 400px;
+  }
+  .reviews__video {
+    max-width: 800px;
+  }
+  .results__cards {
+    margin-right: 0;
+    max-width: 590px;
+  }
+  .questions__input {
+    max-width: 210px;
+  }
+  .questions__button {
+    max-width: 230px;
+  }
+  .footer__nav__block {
+    max-width: 560px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .container {
+    max-width: 700px;
+  }
+  .header__nav {
+    max-width: 340px;
+  }
+  .header__phone {
+    font-size: 16px;
+  }
+  .header__logo {
+    font-size: 16px;
+  }
+  .hero__title {
+    font-size: 60px;
+  }
+  .hero__info {
+    font-size: 18px;
+    max-width: 400px;
+  }
+  .advantages__cards {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .advantages__card-max {
+    margin-top: 60px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
