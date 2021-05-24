@@ -37,12 +37,34 @@ $(document).ready(function(){
   
   
   
-   // Настройка модального окна
-   var modal = $('.modal__calc'), 
-          modalBtn = $('[data-toggle=modal]'),
-          closeBtn = $('.modal__calc__close'),
+   // Настройка модального окна калькулятора
+   var modalCalc = $('.modal__calc'), 
+          modalBtnCalc = $('[data-toggle=modalCalc]'),
+          closeBtnCalc = $('.modal__calc__close'),
           switchModal = () => {
-              modal.toggleClass('modal__calc--visible');
+            modalCalc.toggleClass('modal__calc--visible');
+          } ;
+      modalBtnCalc.on('click', switchModal );
+      closeBtnCalc.on('click', switchModal);
+      
+      // пропадает (и почему то появляется) при нажатии на Esc
+      $(document).keyup(function (e) {
+          if (e.key === "Escape") {
+            modalCalc.removeClass('modal__calc--visible');
+          }
+      });
+      // Скрывает модально окно при нажатии вне него
+      $(document).click(function (event) {
+          if ($(event.target).is('.modal__calc')) {
+            modalCalc.toggleClass('modal__calc--visible');
+          }
+      });
+    //  модальное окно
+   var modal = $('.modal'), 
+          modalBtn = $('[data-toggle=modal]'),
+          closeBtn = $('.modal__close'),
+          switchModal = () => {
+              modal.toggleClass('modal--visible');
           } ;
       modalBtn.on('click', switchModal );
       closeBtn.on('click', switchModal);
@@ -50,13 +72,13 @@ $(document).ready(function(){
       // пропадает (и почему то появляется) при нажатии на Esc
       $(document).keyup(function (e) {
           if (e.key === "Escape") {
-              modal.removeClass('modal__calc--visible');
+              modal.removeClass('modal--visible');
           }
       });
       // Скрывает модально окно при нажатии вне него
       $(document).click(function (event) {
-          if ($(event.target).is('.modal__calc')) {
-              modal.toggleClass('modal__calc--visible');
+          if ($(event.target).is('.modal')) {
+              modal.toggleClass('modal--visible');
           }
       });
   

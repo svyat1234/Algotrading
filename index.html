@@ -38,7 +38,7 @@
         <!-- /.hero__content -->
         <div class="hero__block">
           <div class="hero__buttons">
-            <button class="button button__primary hero__button">начать обучение</button>
+            <button class="button button__primary hero__button"  data-toggle="modal">начать обучение</button>
             <button class="button button__secondary hero__button">узнать подробнее</button>
           </div>
           <!-- /.hero__buttons -->
@@ -135,7 +135,7 @@
             </div>
           </div>
           <!-- /.profit__calc__income -->
-          <botton class="button button__primary profit__button" onclick="plus()" data-toggle="modal">Просчитать прибыль на 2016 год</botton>
+          <botton class="button button__primary profit__button" onclick="plus()" data-toggle="modalCalc">Просчитать прибыль на 2016 год</botton>
         </div>
         <!-- /.profit__calc -->
       </div>
@@ -1178,6 +1178,32 @@
       <button class="modal__calc__close"><img src="img/close.png" class="modal__calc__close-img" alt=""></button>
       <h3 class="modal__calc__title">Ваша прибыль за 2016 год составит:</h3>
       <p id="out"></p>
+  </div>
+  <!-- /.modal__dialog -->
+</div>
+<!-- /.modal__calc -->
+<div class="modal">
+  <div class="modal__dialog">
+      <button class="modal__close"><img src="img/close.png" class="modal__calc__close-img" alt=""></button>
+      <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами</h3>
+      <form action="send.php" method="POST" class="modal__form">
+          <div class="input-group modal__input-group">
+              <input type="text" name="userName" class="input form__input modal__input input--light" id="user-name" placeholder="Имя">
+          </div>
+          <div class="input-group modal__input-group">
+              <input type="tel" name="userPhone" class="input form__input modal__input input--light" id="user-phone" placeholder="Телефон">
+          </div>
+          <div class="input-group modal__input-group">
+              <input type="email" name="userEmail" class="input form__input modal__input input--light" id="user-email" placeholder="Email:">
+          </div>
+          <div class="policy modal__policy">
+              <input type="checkbox" name="policyChekbox" id="policy-chekbox" class="modal__checkbox" checked>
+              <label for="policy-chekbox" class="modal__label">Я соглашаюсь с обработкой данных</label>
+          </div>
+          <!-- /.policy -->
+          <button class="button button__primary modal__button">Отправить заявку</button>
+      </form>
+      <!-- /.modal__form -->
   </div>
   <!-- /.modal__dialog -->
 </div>
