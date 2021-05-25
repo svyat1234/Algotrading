@@ -81,8 +81,9 @@ $(document).ready(function(){
               modal.toggleClass('modal--visible');
           }
       });
-  
-  
+
+
+      // Первый слайдер
   let offset = 0;
   const sliderLine = document.querySelector('.benefit__slider-line');
   
@@ -116,8 +117,101 @@ $(document).ready(function(){
     autoplay: true,
     autoplaySpeed: 2000,
   });
+
+  // Валидация форм
+  $('.modal__form').validate({
+    errorClass: "invalid",
+    rules: {
+      // simple rule, converted to {required:true}
+      userName: {
+        required: true,
+        minlength: 2
+      },
+      userPhone: "required",
+      // compound rule
+      userEmail: {
+        required: true,
+        email: true
+      },
+      policyChekbox: {
+        required: true
+      }
+    }, // сообщения
+    messages: {
+      userName: {
+        required: "Имя обязательно",
+        minlength: "Имя должно быть не короче двух букв"
+      },
+      userPhone: "Телефон обязателен",
+      userEmail: {
+        required: "Email обязателен",
+        email: "Введите в формате: name@domain.com"
+      },
+      policyChekbox: {
+        required: "Ты чего галочку убрал? -_-"
+      }
+    }
+});
+  $('.learn__form').validate({
+    errorClass: "invalid",
+    rules: {
+      // simple rule, converted to {required:true}
+      userName: {
+        required: true,
+        minlength: 2
+      },
+      userPhone: "required",
+      // compound rule
+      userEmail: {
+        required: true,
+        email: true
+      }
+    }, // сообщения
+    messages: {
+      userName: {
+        required: "Имя обязательно",
+        minlength: "Имя должно быть не короче двух букв"
+      },
+      userPhone: "Телефон обязателен",
+      userEmail: {
+        required: "Email обязателен",
+        email: "Введите в формате: name@domain.com"
+      }
+    }
 });
 
+
+
+// Прокрутка наверх
+$(function() {
+  // при нажатии на кнопку scrollup
+  $('.scrollup').click(function() {
+    // переместиться в верхнюю часть страницы
+    $("html, body").animate({
+      scrollTop:0
+    },1100);
+  })
+})
+// при прокрутке окна (window)
+$('.scrollup').fadeOut();
+$(window).scroll(function() {
+  // если пользователь прокрутил страницу более чем на 200px
+  if ($(this).scrollTop()>600) {
+    // то сделать кнопку scrollup видимой
+    $('.scrollup').fadeIn();
+  }
+  // иначе скрыть кнопку scrollup
+  else {
+    $('.scrollup').fadeOut();
+  }
+});
+
+});
+
+
+
+
+// Калькулятор
 function plus(){
     
     var num1, num2, num3, num4, result;
@@ -134,7 +228,7 @@ function plus(){
     num4 = document.getElementById('n4').value;
     num4 = parseInt(num4);
     
-    result = num1 * 123 + num2 * 321 + num3 * 1000 + num4 * 1500 + ' Рублей';
+    result = num1 * 123 + num2 * 321 + num3 * 1000 + num4 * 1500 + ' ₽';
     
     document.getElementById('out').innerHTML = result;
   }

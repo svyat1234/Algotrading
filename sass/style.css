@@ -44,6 +44,21 @@ body {
   font-weight: 400;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .selection {
   color: #06bee1;
 }
@@ -114,6 +129,40 @@ body {
 
 .input::placeholder {
   color: #0f1c2e;
+}
+
+.modal__input-group label.invalid {
+  position: absolute;
+  color: tomato;
+  margin-top: 60px;
+}
+
+.modal__policy label.invalid {
+  position: absolute;
+  color: tomato;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.learn__form label.invalid {
+  position: absolute;
+  top: 50%;
+  margin-top: -18px;
+  color: tomato;
+  margin-left: 110px;
+}
+
+.modal__input-group input.invalid {
+  border-bottom: 1px solid tomato;
+}
+
+.scrollup {
+  position: fixed;
+  top: 90%;
+  margin-left: 100px;
+  color: #06bee1;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 .container {
@@ -371,6 +420,11 @@ body {
   margin-bottom: 70px;
 }
 
+.profit__form {
+  max-width: 700px;
+  width: 100%;
+}
+
 .profit__block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -381,6 +435,7 @@ body {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  max-width: 1120px;
 }
 
 .profit__block__title {
@@ -405,7 +460,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-right: 80px;
 }
 
 .profit__calc__content {
@@ -916,10 +970,10 @@ body {
 }
 
 .process {
-  margin-top: 110px;
+  margin-top: 70px;
   padding-top: 46px;
-  padding-bottom: 210px;
-  background: url("../img/process_bg.png") no-repeat center/cover;
+  padding-bottom: 116px;
+  background: url("../img/process_bg.png") no-repeat top/cover;
 }
 
 .process__title {
@@ -1317,6 +1371,17 @@ body {
   margin: auto;
 }
 
+.learn__form__input {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .learn__input {
   margin-bottom: 24px;
 }
@@ -1455,7 +1520,7 @@ body {
 
 .modal__calc__dialog {
   position: relative;
-  max-width: 40.36rem;
+  max-width: 600px;
   width: 100%;
   min-height: 10rem;
   background: #ffffff;
@@ -1490,15 +1555,16 @@ body {
 }
 
 .modal__calc__title {
-  font-size: 20px;
+  font-size: 30px;
   text-align: center;
   margin: 0;
   margin-bottom: 2.428rem;
   color: #0f1c2e;
+  font-weight: 400;
 }
 
 #out {
-  font-size: 30px;
+  font-size: 36px;
   text-align: center;
   color: #06bee1;
 }
