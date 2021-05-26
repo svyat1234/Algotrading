@@ -2052,6 +2052,15 @@ input[type=number]::-webkit-outer-spin-button {
   .container {
     max-width: 550px;
   }
+  .hero {
+    background: none;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#f7fafc), to(#e4edf6));
+    background-image: linear-gradient(180deg, #f7fafc 0%, #e4edf6 100%);
+    padding-bottom: 300px;
+  }
+  .advantages {
+    margin-top: -200px;
+  }
   .header__logo {
     font-size: 20px;
   }
@@ -2079,6 +2088,319 @@ input[type=number]::-webkit-outer-spin-button {
   .hero__buttons {
     max-width: 300px;
     margin-bottom: 20px;
+  }
+  .benefit {
+    display: none;
+  }
+  .simple__video {
+    min-height: 250px;
+    max-height: 250px;
+    background-position: top;
+  }
+  .format__img {
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+  .format__cards {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding-bottom: 90px;
+  }
+  .format__card {
+    -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
+    margin-bottom: 50px;
+  }
+  .process__content {
+    max-width: 400px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    margin: auto;
+  }
+  .process__content__card {
+    max-width: 200px;
+    margin-bottom: 50px;
+  }
+  .lesson-slider__block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .lesson-slider__content {
+    max-width: 100%;
+  }
+  .lesson-slider__content__left {
+    margin-bottom: 50px;
+  }
+  .lesson-slider__content__bonus {
+    margin-top: 50px;
+  }
+  .lesson-slider .slick-arrow {
+    margin-bottom: -50px;
+  }
+  .lesson__buttons {
+    margin-top: 80px;
+  }
+  .privilege__cards {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .privilege__cards__title {
+    font-size: 26px;
+  }
+  .privilege__card {
+    max-width: 50%;
+    width: 100%;
+  }
+  .privilege__card__title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .privilege__card__text {
+    font-size: 18px;
+  }
+  .price {
+    margin-bottom: 70px;
+  }
+  .price__cards {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .price__card {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    margin-bottom: 50px;
+  }
+  .price__card:not(:last-child) {
+    border-right: none;
+  }
+  .reviews__video {
+    min-height: 250px;
+    max-height: 250px;
+    max-width: 500px;
+  }
+  .results {
+    padding-bottom: 66px;
+  }
+  .results__cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .results__card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 50px;
+  }
+  .results__card__text {
+    max-width: 100%;
+  }
+  .footer__contacts {
+    max-width: 220px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    max-width: 400px;
+  }
+  .hero__title {
+    font-size: 50px;
+    margin-bottom: 20px;
+  }
+  .advantages {
+    margin-top: -220px;
+  }
+  .advantages__title {
+    max-width: 300px;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 20px;
+  }
+  .advantages__cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .advantages__card__img {
+    margin-bottom: 20px;
+  }
+  .advantages__profit {
+    font-size: 230px;
+  }
+  .advantages__profit__card {
+    margin-bottom: 50px;
+  }
+  .advantages__text {
+    font-size: 20px;
+    max-width: 100%;
+  }
+  .profit__info {
+    font-size: 20px;
+    margin-bottom: 70px;
+  }
+  .profit__block__info {
+    font-size: 18px;
+  }
+  .profit__calc__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .profit__calc__info {
+    font-size: 18px;
+    max-width: 70%;
+  }
+  .profit__calc__payment {
+    margin-bottom: 20px;
+    max-width: 100%;
+    width: 100%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+  .profit__calc__result {
+    max-width: 100%;
+    width: 100%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+  .profit__calc__result__info {
+    font-size: 18px;
+    max-width: 70%;
+  }
+  .profit__calc__input {
+    margin-right: 40px;
+  }
+  .profit__button {
+    max-width: 100%;
+    width: 100%;
+    margin: auto;
+    margin-top: 50px;
+  }
+  .simple__create__title {
+    font-size: 24px;
+  }
+  .simple__create__info {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+  .format__images__text {
+    font-size: 18px;
+  }
+  .format__cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .format__card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .format__card__img {
+    margin-bottom: 20px;
+  }
+  .format__card__title {
+    margin-bottom: 20px;
+  }
+  .format__card__text {
+    font-size: 20px;
+    max-width: 100%;
+    text-align: center;
+  }
+  .process {
+    padding-bottom: 0;
+  }
+  .process__content__info {
+    font-size: 24px;
+  }
+  .process__content__text {
+    font-size: 18px;
+    max-width: 175px;
+  }
+  .lesson {
+    display: none;
+  }
+  .privilege__cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .privilege__card {
+    max-width: 100%;
+  }
+  .privilege__card:not(:last-child) {
+    margin-bottom: 50px;
+  }
+  .privilege__card__title {
+    font-size: 24px;
+    font-weight: 400;
+  }
+  .privilege__card__text {
+    max-width: 100%;
+    width: 100%;
+  }
+  .price__info {
+    font-size: 18px;
+  }
+  .price__cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .price__card__text {
+    max-width: 100%;
+    font-size: 18px;
   }
 }
 /*# sourceMappingURL=style.css.map */
