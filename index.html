@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,13 +8,15 @@
   <link rel="stylesheet" href="sass/style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="css/animate.css">
   <link rel="icon" href="img/logo.png">
 </head>
 <body>
   <header class="header">
     <div class="container">
       <div class="header__block">
-        <a href="/" class="logo header__logo">алготрейдинг</a>
+        <a href="/" class="logo header__logo wow animate__animated animate__fadeIn" data-wow-delay="0.1s">алготрейдинг</a>
         <nav class="nav header__nav">
           <a href="#" class="nav__link header__nav__link">Обучение торговле</a>
           <a href="#" class="nav__link header__nav__link">Аналитика</a>
@@ -28,29 +30,26 @@
   </header>
   <!-- /.header -->
   <section class="hero">
-    <div class="hero__introduction">
       <div class="container">
-        <div class="hero__heading">
+        <div class="hero__heading wow animate__animated animate__fadeIn">
           <h1 class="hero__title">Курс алготрейдинга</h1>
           <span class="hero__title__info">обучение алгоритмической торговле</span>
           <span class="hero__info">Всего за месяц прямо на сессиях создайте своего эффективного торгового робота с нуля!</span>
         </div>
         <!-- /.hero__content -->
-        <div class="hero__block">
+        <div class="hero__block wow animate__animated animate__fadeIn" data-wow-delay="0.9s">
           <div class="hero__buttons">
             <button class="button button__primary hero__button"  data-toggle="modal">начать обучение</button>
-            <button class="button button__secondary hero__button">узнать подробнее</button>
+            <a href="#" class="button button__secondary hero__button">узнать подробнее</a>
           </div>
           <!-- /.hero__buttons -->
           <div class="hero__block__text">
-            Ваш собственный прибыльный торговый робот за <sapan class="selection">30 дней!</sapan>
+            Ваш собственный прибыльный торговый робот за <span class="selection">30 дней!</span>
           </div>
           <!-- /.hero__block__text -->
         </div>
       </div>
       <!-- /.container -->
-    </div>
-    <!-- /.hero__introduction -->
   </section>
   <!-- /.hero -->
   <section class="advantages">
@@ -58,8 +57,8 @@
       <h2 class="advantages__title">Почему робот?</h2>
         <div class="advantages__cards">
           <div class="col-40">
-            <div class="advantages__profit__card">
-              <h2 class="advantages__profit">95<span class="selection advantages__profit__percent">%</h2></span>
+            <div class="advantages__profit__card wow animate__animated animate__fadeInUp" data-wow-delay="0.1s">
+              <h2 class="advantages__profit">95<span class="selection advantages__profit__percent">%</span></h2>
                 <div class="advantages__card">
                   <h3 class="advantages__card__title">Увеличение прибыли на финансовых рынках</h3>
                   <!-- /.advantages__card__title -->
@@ -72,7 +71,7 @@
             </div>
             <!-- /.advantages__profit__card -->
           </div>
-            <div class="advantages__card">
+            <div class="advantages__card wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
               <img src="img/adv-icon-1.svg" alt="analysis" class="advantages__card__img">
               <h3 class="advantages__card__title">Глубокий <span class="advantages__card__title-normal">анализ и скорость</span></h3>
               <!-- /.advantages__card__title -->
@@ -82,7 +81,7 @@
               <!-- /.advantages__text -->
             </div>
             <!-- /.advantages__card -->
-            <div class="advantages__card advantages__card-max">
+            <div class="advantages__card advantages__card-max wow animate__animated animate__fadeInUp" data-wow-delay="0.5s">
               <img src="img/adv-icon-2.svg" alt="tools" class="advantages__card__img">
               <h3 class="advantages__card__title">Максимальный <span class="advantages__card__title-normal">инструментарий</span></h3>
               <!-- /.advantages__card__title -->
@@ -101,7 +100,7 @@
   <section class="profit">
     <div class="container">
       <div class="section__heading">
-        <h2 class="section__title profit__title">Создайте своего <br> авторского торгового робота</h2>
+        <h2 class="section__title profit__title wow animate__animated animate__fadeIn">Создайте своего <br> авторского торгового робота</h2>
         <span class="section__info profit__info">получайте прибыль даже с нулевыми знаниями в сфере алгоритмической торговли</span>
         <!-- /.profit__info -->
       </div>
@@ -112,7 +111,7 @@
           <span class="profit__block__info">Просто введите данные и сравните результаты</span>
         </div>
         <!-- /.profit__block__heading -->
-          <form class="profit__form">
+          <div class="profit__form">
             <div class="profit__calc">
               <div class="profit__calc__content">
                 <div class="profit__calc__payment">
@@ -139,10 +138,10 @@
                 </div>
               </div>
               <!-- /.profit__calc__income -->
-              <botton class="button button__primary profit__button" onclick="plus()" data-toggle="modalCalc">Просчитать прибыль на 2016 год</botton>
+              <button class="button button__primary profit__button" onclick="plus()" data-toggle="modalCalc">Просчитать прибыль на 2016 год</button>
             </div>
             <!-- /.profit__calc -->
-          </form>
+          </div>
           <!-- /.profit__form -->
       </div>
       <!-- /.profit__block -->
@@ -150,17 +149,17 @@
     <!-- /.container -->
   </section>
   <!-- /.profit -->
-  <section class="study">
+  <div class="study">
     <p class="study__info">Обучитесь алгоритмической торговле <br>
       и уже <span class="selection">через 30 дней</span> создайте <br>
       своего эффективного торгового робота!</p>
-    <button class="button study__button">Начать обучение</button>
-  </section>
+    <button class="button study__button" data-toggle="modal">Начать обучение</button>
+  </div>
   <!-- /.study -->
   <section class="benefit">
     <div class="container">
       <div class="benefit-bg">
-        <h2 class="section__title benefit__title"><span class="section__text-bold">Какие выгоды</span> я получу от создания своего робота?</h2>
+        <h2 class="section__title benefit__title wow animate__animated animate__fadeIn"><span class="section__text-bold">Какие выгоды</span> я получу от создания своего робота?</h2>
         <div class="benefit__slider">
           <div class="benefit__slider-line">
             <div class="benefit__slider-line__card">
@@ -221,18 +220,18 @@
   <section class="simple">
     <div class="container">
       <div class="section__heading">
-        <h2 class="section__title"><span class="section__text-bold">Всё</span> очень просто</h2>
-        <span class="section__info simple__info">Никаких лишних движений во время обучения.
+        <h2 class="section__title wow animate__animated animate__fadeIn" data-wow-delay="0.2s"><span class="section__text-bold">Всё</span> очень просто</h2>
+        <span class="section__info simple__info wow animate__animated animate__fadeIn" data-wow-delay="0.4s">Никаких лишних движений во время обучения.
           Мы с Вами будем чётко следовать <br>
           по разработанной нами карте обучения.</span>
       </div>
       <!-- /.section__heading -->
       <div class="simple__list">
-        <p class="simple__cell">Создание робота</p>
-        <p class="simple__cell">Внедрение</p>
-        <p class="simple__cell">Оптимизация</p>
-        <p class="simple__cell">Запуск</p>
-        <p class="simple__cell">Прибыль</p>
+        <p class="simple__cell wow animate__animated animate__fadeInUp">Создание робота</p>
+        <p class="simple__cell wow animate__animated animate__fadeInUp">Внедрение</p>
+        <p class="simple__cell wow animate__animated animate__fadeInUp">Оптимизация</p>
+        <p class="simple__cell wow animate__animated animate__fadeInUp">Запуск</p>
+        <p class="simple__cell wow animate__animated animate__fadeInUp">Прибыль</p>
       </div>
       <!-- /.simple__list -->
       <div class="simple__video video" id="player">
@@ -244,7 +243,7 @@
         <h2 class="simple__create__title">Реальный пример работы алгоритма</h2>
         <p class="simple__create__info">Меня с детства интересовал анализ процессов, которые происходят в мире финансов. Именно этот интерес меня подтолкнул получить высшее образование в сфере экономико-математического моделирования
         </p>
-        <button class="button button__primary simple__button">Приступить к созданию своего доходного робота</button>
+        <button class="button button__primary simple__button" data-toggle="modal">Приступить к созданию своего доходного робота</button>
       </div>
       <!-- /.simple__create -->
     </div>
@@ -253,7 +252,7 @@
   <!-- /.simple -->
   <section class="format">
    <div class="container">
-     <h2 class="section__title format__title">Формат обучение</h2>
+     <h2 class="section__title format__title wow animate__animated animate__fadeIn" data-wow-delay="0.2s">Формат обучения</h2>
     <div class="format__images">
       <div class="format__images__content">
         <img src="img/format_1.jpg" alt="example" class="format__img">
@@ -306,28 +305,28 @@
   <!-- /.format -->
   <section class="process">
     <div class="container">
-      <h2 class="section__title process__title"><span class="section__text-bold">Как выглядит</span> Ваш процесс
+      <h2 class="section__title process__title wow animate__animated animate__fadeIn" data-wow-delay="0.2s"><span class="section__text-bold">Как выглядит</span> Ваш процесс
         обучения алготрейдингу?</h2>
       <div class="process__content">
-        <div class="process__content__card">
+        <div class="process__content__card wow animate__animated animate__fadeInUp" data-wow-delay="0.1s">
           <h3 class="process__content__title">20</h3>
           <span class="process__content__info">Уроков</span>
           <p class="process__content__text">Продолжительность курса</p>
         </div>
         <!-- /.procesc__content__card -->
-        <div class="process__content__card">
+        <div class="process__content__card wow animate__animated animate__fadeInUp" data-wow-delay="0.2s">
           <h3 class="process__content__title">2133</h3>
           <span class="process__content__info">Минут</span>
           <p class="process__content__text">Продолжительность курса алготрейдинга</p>
         </div>
         <!-- /.procesc__content__card -->
-        <div class="process__content__card">
+        <div class="process__content__card wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
           <h3 class="process__content__title">1</h3>
           <span class="process__content__info">Неделя</span>
           <p class="process__content__text">Домашнего <br> задания к 9 уроку</p>
         </div>
         <!-- /.procesc__content__card -->
-        <div class="process__content__card">
+        <div class="process__content__card wow animate__animated animate__fadeInUp" data-wow-delay="0.4s">
           <h3 class="process__content__title">1</h3>
           <span class="process__content__info">Месяц</span>
           <p class="process__content__text">Домашнего задания к 10 уроку — экзамену</p>
@@ -875,8 +874,8 @@
       </div>
       <!-- /.lesson-slider -->
       <div class="lesson__buttons">
-        <button class="button button__light lesson__button">Узнать подробнее</button>
-        <button class="button button__primary lesson__button">Начать обучение</button>
+        <a href="#" class="button button__light lesson__button">Узнать подробнее</a>
+        <button class="button button__primary lesson__button" data-toggle="modal">Начать обучение</button>
       </div>
       <!-- /.lesson__butons -->
     </div>
@@ -885,9 +884,9 @@
   <!-- /.lesson -->
   <section class="privilege">
     <div class="container">
-      <h2 class="section__title privilege__title">Преимущества курса</h2>
+      <h2 class="section__title privilege__title wow animate__animated animate__fadeIn" data-wow-delay="0.2s"">Преимущества курса</h2>
       <h3 class="privilege__cards__title">Интенсив</h3>
-      <div class="privilege__cards">
+      <div class="privilege__cards wow animate__animated animate__fadeIn" data-wow-delay="0.4s">
         <div class="privilege__card">
           <img src="img/star_priv.png" alt="" class="privilege__card__image">
           <h3 class="privilege__card__title">Профессионалы</h3>
@@ -909,7 +908,7 @@
       </div>
       <!-- /.privilege__cards -->
       <h3 class="privilege__cards__title">Результат</h3>
-      <div class="privilege__cards">
+      <div class="privilege__cards wow animate__animated animate__fadeIn" data-wow-delay="0.4s"">
         <div class="privilege__card">
           <img src="img/bot.png" alt="" class="privilege__card__image">
           <h3 class="privilege__card__title">Авторские работы.</h3>
@@ -937,8 +936,8 @@
   <section class="price">
     <div class="container">
       <div class="section__heading">
-        <h2 class="section__title price__title">Сколько стоит обучение?</h2>
-        <span class="section__info price__info">Станьте частью алготрейдинга прямо сейчас и всего за месяц прямо на сессиях создайте своего эффективного торгового робота с нуля!</span>
+        <h2 class="section__title price__title wow animate__animated animate__fadeIn" data-wow-delay="0.2s">Сколько стоит обучение?</h2>
+        <span class="section__info price__info wow animate__animated animate__fadeIn" data-wow-delay="0.4s">Станьте частью алготрейдинга прямо сейчас и всего за месяц прямо на сессиях создайте своего эффективного торгового робота с нуля!</span>
         <div class="price__cards">
           <div class="price__card">
             <h3 class="price__card__title">Gold</h3>
@@ -947,7 +946,7 @@
             <p class="price__card__text">Практиика</p>
             <p class="price__card__text">Ответы на вопросы?</p>
             <p class="price__card__text">Тех. поддержка</p>
-            <button class="button button__secondary price__button">купить</button>
+            <a href="#" class="button button__secondary price__button">купить</a>
           </div>
           <!-- /.price__card -->
           <div class="price__card">
@@ -956,7 +955,7 @@
             <p class="price__card__text">Обучение с куратором</p>
             <p class="price__card__text">Постоянная возможность связаться с преподователем</p>
             <p class="price__card__text">Практика</p>
-            <button class="button button__secondary price__button">купить</button>
+            <a href="#" class="button button__secondary price__button">купить</a>
           </div>
           <!-- /.price__card -->
           <div class="price__card">
@@ -965,7 +964,7 @@
             <p class="price__card__text">Полностью индивидуальное обучение!</p>
             <p class="price__card__text">Индивидуальная программа</p>
             <p class="price__card__text">Максимум практики</p>
-            <button class="button button__secondary price__button">купить</button>
+            <a href="#" class="button button__secondary price__button">купить</a>
           </div>
           <!-- /.price__card -->
         </div>
@@ -995,7 +994,7 @@
   <!-- /.learn -->
   <div class="reviews">
     <div class="container">
-      <h2 class="section__title reviews__title"><span class="section__text-bold">Отзывы</span> наших учеников</h2>
+      <h2 class="section__title reviews__title wow animate__animated animate__fadeIn" data-wow-delay="0.2s""><span class="section__text-bold">Отзывы</span> наших учеников</h2>
       <div class="reviews__content">
         <div class="reviews-slider">
           <div class="reviews-slider__item">
@@ -1035,8 +1034,8 @@
   <section class="results">
     <div class="container">
       <div class="results__block">
-          <div class="results__heading">
-            <h2 class="section__title results__title"><span class="section__text-bold">Результаты</span> наших учеников</h2>
+          <div class="results__heading wow animate__animated animate__fadeInUp" data-wow-delay="0.2s"">
+            <h2 class="section__title results__title "><span class="section__text-bold">Результаты</span> наших учеников</h2>
             <span class="section__info results__info">С нами наши ученики научились эффективно торговать на международных рынках</span>
           </div>
         <!-- /.results__heading -->
@@ -1064,7 +1063,7 @@
   <section class="create">
     <div class="container">
       <h2 class="create__title">Мы вернем Вам 100%&nbsp;вложенных средств, если Вам не понравятся первые 3 урока</h2>
-      <button class="button button__primary create__button">Приступить к созданию своего доходного робота</button>
+      <button class="button button__primary create__button" data-toggle="modal">Приступить к созданию своего доходного робота</button>
     </div>
     <!-- /.container -->
   </section>
@@ -1072,8 +1071,8 @@
   <section class="price">
     <div class="container">
       <div class="section__heading">
-        <h2 class="section__title price__title">Сколько стоит обучение?</h2>
-        <span class="section__info price__info">Станьте частью алготрейдинга прямо сейчас и всего за месяц прямо на сессиях создайте своего эффективного торгового робота с нуля!</span>
+        <h2 class="section__title price__title wow animate__animated animate__fadeIn" data-wow-delay="0.2s">Сколько стоит обучение?</h2>
+        <span class="section__info price__info wow animate__animated animate__fadeIn" data-wow-delay="0.4s">Станьте частью алготрейдинга прямо сейчас и всего за месяц прямо на сессиях создайте своего эффективного торгового робота с нуля!</span>
         <div class="price__cards">
           <div class="price__card">
             <h3 class="price__card__title">Gold</h3>
@@ -1082,7 +1081,7 @@
             <p class="price__card__text">Практика</p>
             <p class="price__card__text">Ответы на вопросы</p>
             <p class="price__card__text">Тех. поддержка</p>
-            <button class="button button__secondary price__button">купить</button>
+            <a href="#" class="button button__secondary price__button">купить</a>
           </div>
           <!-- /.price__card -->
           <div class="price__card">
@@ -1091,7 +1090,7 @@
             <p class="price__card__text">Обучение с куратором</p>
             <p class="price__card__text">Постоянная возможность связаться с преподователем</p>
             <p class="price__card__text">Практика</p>
-            <button class="button button__secondary price__button">купить</button>
+            <a href="#" class="button button__secondary price__button">купить</a>
           </div>
           <!-- /.price__card -->
           <div class="price__card">
@@ -1100,7 +1099,7 @@
             <p class="price__card__text">Полностью индивидуальное обучение!</p>
             <p class="price__card__text">Индивидуальная программа</p>
             <p class="price__card__text">Максимум практики</p>
-            <button class="button button__secondary price__button">купить</button>
+            <a href="#" class="button button__secondary price__button">купить</a>
           </div>
           <!-- /.price__card -->
         </div>
@@ -1114,8 +1113,8 @@
   <section class="questions">
     <div class="container">
       <div class="questions__heading">
-        <h2 class="questions__title">Остались вопросы?</h2>
-        <span class="section__info questions__info">Оставьте свои контактные данные и мы с Вами свяжемся в самое ближайшее время</span>
+        <h2 class="questions__title wow animate__animated animate__fadeIn" data-wow-delay="0.2s">Остались вопросы?</h2>
+        <span class="section__info questions__info wow animate__animated animate__fadeIn" data-wow-delay="0.4s">Оставьте свои контактные данные и мы с Вами свяжемся в самое ближайшее время</span>
       </div>
       <!-- /.questions__heading -->
       <form action="send.php" method="POST" class="questions__form">
@@ -1231,6 +1230,7 @@
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/slick.min.js"></script>
+  <script src="js/wow.min.js"></script>
   <script src="js/jquery.mask.min.js"></script>
   <script src="js/main.js"></script>
 </body>

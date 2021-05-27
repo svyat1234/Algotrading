@@ -1,4 +1,8 @@
 $(document).ready(function(){
+  $(function(){
+new WOW().init(); 
+
+});
   var player;
   $('.simple__video').on('click', function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
@@ -159,7 +163,7 @@ $(document).ready(function(){
               console.log('Ajax сработал. Ответ сервера:' + response);
               $(form)[0].reset();
               modal.removeClass('modal--visible');
-              alert('Форма отправлена, мы свяжемся с вами в течении 15 минут.')
+              alert('Спасибо за заявку! Мы свяжемся с вами в течении 15 минут.')
           }
       });
   }

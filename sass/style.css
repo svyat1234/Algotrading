@@ -73,6 +73,8 @@ input[type=number]::-webkit-outer-spin-button {
   cursor: pointer;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+  text-decoration: none;
+  text-align: center;
 }
 
 .button__primary {
@@ -1742,7 +1744,19 @@ input[type=number]::-webkit-outer-spin-button {
   border-radius: 4px;
 }
 
-.footer__input:placeholder {
+.footer__input::-webkit-input-placeholder {
+  color: #777777;
+}
+
+.footer__input:-ms-input-placeholder {
+  color: #777777;
+}
+
+.footer__input::-ms-input-placeholder {
+  color: #777777;
+}
+
+.footer__input::placeholder {
   color: #777777;
 }
 
@@ -1895,6 +1909,11 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 @media screen and (max-width: 1250px) {
+  .scrollup {
+    margin-left: 0;
+    left: 0;
+    bottom: 0;
+  }
   .container {
     max-width: 900px;
   }
