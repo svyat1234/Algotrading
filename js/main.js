@@ -82,7 +82,6 @@ $(document).ready(function(){
           }
       });
 
-
       // Первый слайдер
   let offset = 0;
   const sliderLine = document.querySelector('.benefit__slider-line');
@@ -150,7 +149,20 @@ $(document).ready(function(){
       policyChekbox: {
         required: "Ты чего галочку убрал? -_-"
       }
-    }
+    },
+    submitHandler: function(form) {
+      $.ajax({
+          type: "POST",
+          url: "send.php",
+          data: $(form).serialize(),
+          success: function (response) {
+              console.log('Ajax сработал. Ответ сервера:' + response);
+              $(form)[0].reset();
+              modal.removeClass('modal--visible');
+              alert('Форма отправлена, мы свяжемся с вами в течении 15 минут.')
+          }
+      });
+  }
 });
   $('.learn__form').validate({
     errorClass: "invalid",
@@ -177,10 +189,61 @@ $(document).ready(function(){
         required: "Email обязателен",
         email: "Введите в формате: name@domain.com"
       }
-    }
+    },
+    submitHandler: function(form) {
+      $.ajax({
+          type: "POST",
+          url: "send.php",
+          data: $(form).serialize(),
+          success: function (response) {
+              console.log('Ajax сработал. Ответ сервера:' + response);
+              $(form)[0].reset();
+              modal.removeClass('modal--visible');
+              alert('Форма отправлена, мы свяжемся с вами в течении 15 минут.')
+          }
+      });
+  }
 });
-
-
+  $('.questions__form').validate({
+    errorClass: "invalid",
+    rules: {
+      // simple rule, converted to {required:true}
+      userName: {
+        required: true,
+        minlength: 2
+      },
+      userPhone: "required",
+      // compound rule
+      userEmail: {
+        required: true,
+        email: true
+      }
+    }, // сообщения
+    messages: {
+      userName: {
+        required: "Имя обязательно",
+        minlength: "Имя должно быть не короче двух букв"
+      },
+      userPhone: "Телефон обязателен",
+      userEmail: {
+        required: "Email обязателен",
+        email: "Введите в формате: name@domain.com"
+      }
+    },
+    submitHandler: function(form) {
+      $.ajax({
+          type: "POST",
+          url: "send.php",
+          data: $(form).serialize(),
+          success: function (response) {
+              console.log('Ajax сработал. Ответ сервера:' + response);
+              $(form)[0].reset();
+              modal.removeClass('modal--visible');
+              alert('Форма отправлена, мы свяжемся с вами в течении 15 минут.')
+          }
+      });
+  }
+});
 
 // Прокрутка наверх
 $(function() {
@@ -206,8 +269,8 @@ $(window).scroll(function() {
   }
 });
 
+$('[type=tel]').mask('+7(000) 000-00-00');
 });
-
 
 
 

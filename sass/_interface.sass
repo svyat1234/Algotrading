@@ -50,7 +50,7 @@
     position: absolute
     color: tomato
     margin-top: 20px
-    margin-left: 10px
+    margin-left: 13px
 .learn__form label
   &.invalid
     position: absolute
@@ -61,10 +61,34 @@
 .modal__input-group input
 	&.invalid
 		border-bottom: 1px solid tomato
+.questions__form label
+  &.invalid
+    position: absolute
+    left: 0
+    bottom: 0
+    margin-bottom: -20px
+    color: tomato
 .scrollup
   position: fixed
   top: 90%
   margin-left: 100px
   color: $selection
   font-size: 20px
+  height: 70px
+  width: 70px
   cursor: pointer
+  border: 2px solid $primary
+  border-radius: 50%
+  background-color: $primary
+  &__nav
+    position: absolute
+    left: 50%
+    top: 50%
+    margin-left: -10px
+    margin-top: -7px
+    width: 20px
+    height: 20px
+    border-top: 5px solid $light
+    border-right: 5px solid $light
+    margin-right: 60px
+    transform: rotate(-45deg)

@@ -327,7 +327,7 @@
           <p class="process__content__text">Домашнего <br> задания к 9 уроку</p>
         </div>
         <!-- /.procesc__content__card -->
-        <div class="procesc__content__card">
+        <div class="process__content__card">
           <h3 class="process__content__title">1</h3>
           <span class="process__content__info">Месяц</span>
           <p class="process__content__text">Домашнего задания к 10 уроку — экзамену</p>
@@ -983,7 +983,7 @@
         <span class="section__info learn__info">Просто внесите Ваши данные в форму прям сейчас, и мы сразу Вам вышлем подборку первых видеоуроков. Убедитесь сами!</span>
       </div>
       <!-- /.section__heading -->
-      <form class="learn__form">
+      <form action="send.php" method="POST" class="learn__form">
         <div class="learn__form__input"><input type="text" name="userName" class="input learn__input"  placeholder="Имя"></div>
         <div class="learn__form__input"><input type="tel" name="userPhone" class="input learn__input"  placeholder="Телефон"></div>
         <div class="learn__form__input"><input type="email" name="userEmail" class="input learn__input"  placeholder="Email"></div>
@@ -1118,10 +1118,20 @@
         <span class="section__info questions__info">Оставьте свои контактные данные и мы с Вами свяжемся в самое ближайшее время</span>
       </div>
       <!-- /.questions__heading -->
-      <form class="questions__form">
-        <input type="text" name="userName" class="input questions__input" id="user-name" placeholder="Имя">
-        <input type="tel" name="userPhone" class="input questions__input" id="user-name" placeholder="Телефон">
-        <input type="email" name="userEmail" class="input questions__input" id="user-name" placeholder="Email">
+      <form action="send.php" method="POST" class="questions__form">
+        <div class="questions__form__input">
+          <input type="text" name="userName" class="input questions__input" placeholder="Имя">
+        </div>
+        <!-- /.questions__form__input -->
+        <div class="questions__form__input">
+
+          <input type="tel" name="userPhone" class="input questions__input" placeholder="Телефон">
+        </div>
+        <!-- /.questions__form__input -->
+        <div class="questions__form__input">
+          <input type="email" name="userEmail" class="input questions__input"  placeholder="Email">
+        </div>
+        <!-- /.questions__form__input -->
         <button class="button button__primary questions__button">Свяжитесь со мной</button>
       </form>
       <!-- /.questions__form -->
@@ -1215,12 +1225,13 @@
 </div>
 <!-- /.modal -->
 <div class="scrollup">
-  <span class="scrollup__text">Наверх</span>
+  <div class="scrollup__nav"></div>
 </div>
 <!-- /.scrollup -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/slick.min.js"></script>
+  <script src="js/jquery.mask.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
