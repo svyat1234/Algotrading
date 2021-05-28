@@ -1,9 +1,9 @@
-@media screen and ( max-width:1250px )
-  *
+@media screen and ( max-width:1530px )
   .scrollup
-    margin-left: 0
-    left: 0
-    bottom: 0
+    margin-left: 30px
+@media screen and ( max-width:1250px )
+  .profit
+    background-size: 45%
   .container
     max-width: 900px
   .header
@@ -63,6 +63,13 @@
           opacity: 0
     &:hover > .video__play
       transform: scale(1)
+  .modal__calc__close-img
+    &:hover
+      transform: scale(1)
+  .footer
+    &__link
+      &:hover
+        color: #777777
 @media screen and ( max-width:960px )
   .scrollup
     opacity: 0
@@ -85,12 +92,14 @@
   .advantages
     &__cards
       flex-wrap: wrap
-      padding-bottom: 120px
+      padding-bottom: 60px
     &__card
       &-max
         margin: auto
         margin-top: 100px
   .profit
+    margin-top: 55px
+    padding-bottom: 55px
     &__info
       margin-bottom: 50px
       font-size: 18px
@@ -108,29 +117,59 @@
         margin-top: 10px
     &__calc
       max-width: 100%
+  .benefit
+    padding-top: 60px
+  .simple
+    padding-top: 66px
+    &::before
+      height: 50px
+    &__create
+      padding-bottom: 60px
   .format
+    margin-top: 68px
     &__img
       max-width: 330px
+    &__cards
+      padding-bottom: 70px
   .process
     padding-top: 0
-    margin-top: 116px
+    margin-top: 68px
+    padding-bottom: 68px
+  .lesson
+    padding-top: 60px
+    padding-bottom: 60px
   .lesson-slider
     &__block
       justify-content: space-between
     &__content
       margin-right: 0
       max-width: 45%
+  .privilege
+    padding-top: 69px
+    padding-bottom: 68px
   .price
+    padding-top: 69px
+    margin-bottom: 60px
     &__card
       &__text
         max-width: 200px
+  .learn
+    padding-top: 64px
+    padding-bottom: 61px
+  .reviews
+    padding-top: 60px
+    &::after
+      height: 50px
   .reviews__video
     max-width: 650px
     min-height: 350px
     max-height: 350px
   .results
+    margin-top: 58px
+    padding-bottom: 58px
     &__block
       flex-direction: column
+      padding-top: 60px
     &__heading
       text-align: center
       margin: auto
@@ -145,7 +184,12 @@
       &__text
         font-size: 18px
         font-weight: 300
+  .create
+    padding-top: 69px
+    padding-bottom: 69px
   .questions
+    padding-top: 69px
+    padding-bottom: 61px
     &__heading
       margin-bottom: 30px
     &__form
@@ -166,7 +210,12 @@
       margin-top: -23px
       margin-left: 120px
       color: tomato
+  .price
+    &::before
+      height: 50px
   .footer
+    padding-top: 69px
+    padding-bottom: 69px
     &__info
       display: none
     &__nav
@@ -216,8 +265,10 @@
       flex-wrap: wrap 
       padding-bottom: 90px
     &__card
-      flex-basis: 45%
-      margin-bottom: 50px
+      &:not(:last-child)
+        
+        flex-basis: 45%
+        margin-bottom: 50px
   .process
     &__content
       max-width: 400px
@@ -410,6 +461,13 @@
       &__text
         max-width: 100%
         font-size: 18px
+  .footer
+    &__content
+      flex-direction: column
+    &__nav
+      max-width: 300px
+    &__contacts
+      margin-top: 30px
 
 @media screen and ( max-width: 430px )
   .modal
@@ -442,9 +500,13 @@
   .profit
     &__button
       text-align: center
+      font-size: 14px
   .study
     &__info
       max-width: 360px
+  .create
+    &__button
+      font-size: 14px
   .simple
     &__cell
       margin: 0
@@ -476,15 +538,9 @@
       max-height: 200px
       max-width: 280px
       background-size: cover
+
   .footer
     padding-top: 50px
     padding-bottom: 50px
     &__title
       font-size: 30px
-    &__nav
-      max-width: 300px
-      width: 100%
-    &__contacts
-      margin-top: 30px
-    &__content
-      flex-direction: column

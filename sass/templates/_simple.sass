@@ -1,7 +1,18 @@
 .simple
+  position: relative
   background-color: $light 
-  margin-top: 117px
+  padding-top: 117px
   text-align: center
+  &::before
+    position: absolute
+    content: ''
+    display: flex
+    top: 0
+    left: 50%
+    margin-left: -1px
+    width: 1px
+    height: 72px
+    background-color: #eaf1f7
   &__info
     max-width: 360px
   &__cell

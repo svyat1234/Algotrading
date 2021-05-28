@@ -8,6 +8,9 @@
     font-weight: 300
     font-size: 24px
     margin-bottom: 50px
+    text-decoration: none
+    display: flex
+    color: $dark
   &__info
     font-size: 17px
     font-weight: 300
@@ -38,11 +41,16 @@
     font-size: 17px
     text-decoration: none
     color: #777777
+    transition: all 0.2s
+    &:hover
+      color: $dark
   &__input
     font-size: 17px
     padding: 17px 19px
     border: 1px solid #cfdeee
     border-radius: 4px
+    background: url('../img/post.png') no-repeat right
+    background-position-x: 90%
     &::placeholder
       color: #777777
   &__contacts

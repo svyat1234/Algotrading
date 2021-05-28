@@ -172,8 +172,8 @@ input[type=number]::-webkit-outer-spin-button {
   margin-left: 100px;
   color: #06bee1;
   font-size: 20px;
-  height: 70px;
-  width: 70px;
+  height: 40px;
+  width: 40px;
   cursor: pointer;
   border: 2px solid #0056cf;
   border-radius: 50%;
@@ -184,12 +184,12 @@ input[type=number]::-webkit-outer-spin-button {
   position: absolute;
   left: 50%;
   top: 50%;
-  margin-left: -10px;
-  margin-top: -7px;
-  width: 20px;
-  height: 20px;
-  border-top: 5px solid #ffffff;
-  border-right: 5px solid #ffffff;
+  margin-left: -7px;
+  margin-top: -5px;
+  width: 15px;
+  height: 15px;
+  border-top: 3px solid #ffffff;
+  border-right: 3px solid #ffffff;
   margin-right: 60px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
@@ -439,6 +439,8 @@ input[type=number]::-webkit-outer-spin-button {
 
 .profit {
   margin-top: 110px;
+  padding-bottom: 110px;
+  background: url("../img/lines_left.png") no-repeat left bottom, url("../img/lines_right.png") no-repeat right bottom;
 }
 
 .profit__title {
@@ -565,7 +567,6 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .study {
-  margin-top: 120px;
   background: url("../img/study_bg.jpg") no-repeat center/cover;
   padding-top: 127px;
   padding-bottom: 119px;
@@ -742,9 +743,24 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .simple {
+  position: relative;
   background-color: #ffffff;
-  margin-top: 117px;
+  padding-top: 117px;
   text-align: center;
+}
+
+.simple::before {
+  position: absolute;
+  content: '';
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: 0;
+  left: 50%;
+  margin-left: -1px;
+  width: 1px;
+  height: 72px;
+  background-color: #eaf1f7;
 }
 
 .simple__info {
@@ -1682,6 +1698,11 @@ input[type=number]::-webkit-outer-spin-button {
   font-weight: 300;
   font-size: 24px;
   margin-bottom: 50px;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: #0f1c2e;
 }
 
 .footer__info {
@@ -1735,6 +1756,12 @@ input[type=number]::-webkit-outer-spin-button {
   font-size: 17px;
   text-decoration: none;
   color: #777777;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+
+.footer__link:hover {
+  color: #0f1c2e;
 }
 
 .footer__input {
@@ -1742,6 +1769,8 @@ input[type=number]::-webkit-outer-spin-button {
   padding: 17px 19px;
   border: 1px solid #cfdeee;
   border-radius: 4px;
+  background: url("../img/post.png") no-repeat right;
+  background-position-x: 90%;
 }
 
 .footer__input::-webkit-input-placeholder {
@@ -1908,11 +1937,15 @@ input[type=number]::-webkit-outer-spin-button {
   margin: auto;
 }
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1530px) {
   .scrollup {
-    margin-left: 0;
-    left: 0;
-    bottom: 0;
+    margin-left: 30px;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .profit {
+    background-size: 45%;
   }
   .container {
     max-width: 900px;
@@ -1986,6 +2019,13 @@ input[type=number]::-webkit-outer-spin-button {
     -webkit-transform: scale(1);
             transform: scale(1);
   }
+  .modal__calc__close-img:hover {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  .footer__link:hover {
+    color: #777777;
+  }
 }
 
 @media screen and (max-width: 960px) {
@@ -2015,11 +2055,15 @@ input[type=number]::-webkit-outer-spin-button {
   .advantages__cards {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    padding-bottom: 120px;
+    padding-bottom: 60px;
   }
   .advantages__card-max {
     margin: auto;
     margin-top: 100px;
+  }
+  .profit {
+    margin-top: 55px;
+    padding-bottom: 55px;
   }
   .profit__info {
     margin-bottom: 50px;
@@ -2047,12 +2091,35 @@ input[type=number]::-webkit-outer-spin-button {
   .profit__calc {
     max-width: 100%;
   }
+  .benefit {
+    padding-top: 60px;
+  }
+  .simple {
+    padding-top: 66px;
+  }
+  .simple::before {
+    height: 50px;
+  }
+  .simple__create {
+    padding-bottom: 60px;
+  }
+  .format {
+    margin-top: 68px;
+  }
   .format__img {
     max-width: 330px;
   }
+  .format__cards {
+    padding-bottom: 70px;
+  }
   .process {
     padding-top: 0;
-    margin-top: 116px;
+    margin-top: 68px;
+    padding-bottom: 68px;
+  }
+  .lesson {
+    padding-top: 60px;
+    padding-bottom: 60px;
   }
   .lesson-slider__block {
     -webkit-box-pack: justify;
@@ -2063,19 +2130,42 @@ input[type=number]::-webkit-outer-spin-button {
     margin-right: 0;
     max-width: 45%;
   }
+  .privilege {
+    padding-top: 69px;
+    padding-bottom: 68px;
+  }
+  .price {
+    padding-top: 69px;
+    margin-bottom: 60px;
+  }
   .price__card__text {
     max-width: 200px;
+  }
+  .learn {
+    padding-top: 64px;
+    padding-bottom: 61px;
+  }
+  .reviews {
+    padding-top: 60px;
+  }
+  .reviews::after {
+    height: 50px;
   }
   .reviews__video {
     max-width: 650px;
     min-height: 350px;
     max-height: 350px;
   }
+  .results {
+    margin-top: 58px;
+    padding-bottom: 58px;
+  }
   .results__block {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding-top: 60px;
   }
   .results__heading {
     text-align: center;
@@ -2093,6 +2183,14 @@ input[type=number]::-webkit-outer-spin-button {
   .results__card__text {
     font-size: 18px;
     font-weight: 300;
+  }
+  .create {
+    padding-top: 69px;
+    padding-bottom: 69px;
+  }
+  .questions {
+    padding-top: 69px;
+    padding-bottom: 61px;
   }
   .questions__heading {
     margin-bottom: 30px;
@@ -2122,6 +2220,13 @@ input[type=number]::-webkit-outer-spin-button {
     margin-top: -23px;
     margin-left: 120px;
     color: tomato;
+  }
+  .price::before {
+    height: 50px;
+  }
+  .footer {
+    padding-top: 69px;
+    padding-bottom: 69px;
   }
   .footer__info {
     display: none;
@@ -2192,7 +2297,7 @@ input[type=number]::-webkit-outer-spin-button {
         flex-wrap: wrap;
     padding-bottom: 90px;
   }
-  .format__card {
+  .format__card:not(:last-child) {
     -ms-flex-preferred-size: 45%;
         flex-basis: 45%;
     margin-bottom: 50px;
@@ -2496,6 +2601,18 @@ input[type=number]::-webkit-outer-spin-button {
     max-width: 100%;
     font-size: 18px;
   }
+  .footer__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer__nav {
+    max-width: 300px;
+  }
+  .footer__contacts {
+    margin-top: 30px;
+  }
 }
 
 @media screen and (max-width: 430px) {
@@ -2534,9 +2651,13 @@ input[type=number]::-webkit-outer-spin-button {
   }
   .profit__button {
     text-align: center;
+    font-size: 14px;
   }
   .study__info {
     max-width: 360px;
+  }
+  .create__button {
+    font-size: 14px;
   }
   .simple__cell {
     margin: 0;
@@ -2584,19 +2705,6 @@ input[type=number]::-webkit-outer-spin-button {
   }
   .footer__title {
     font-size: 30px;
-  }
-  .footer__nav {
-    max-width: 300px;
-    width: 100%;
-  }
-  .footer__contacts {
-    margin-top: 30px;
-  }
-  .footer__content {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
   }
 }
 /*# sourceMappingURL=style.css.map */
