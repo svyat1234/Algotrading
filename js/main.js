@@ -18,7 +18,7 @@ new WOW().init();
     player = new YT.Player('revPlayerAlice', {
       height: '465',
       width: '100%',
-      videoId: 'FTu_ndnh-wc',
+      videoId: '8hxawxyPZ3c',
       events: {
         'onReady': videoPlay,
       },
@@ -28,7 +28,7 @@ new WOW().init();
     player = new YT.Player('revPlayerBob', {
       height: '465',
       width: '100%',
-      videoId: 'Fmup6MTTPyg',
+      videoId: '8hxawxyPZ3c',
       events: {
         'onReady': videoPlay,
       },
